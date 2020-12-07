@@ -10,9 +10,9 @@ const declareMurderer = function() {
 }
 
 const verdict = declareMurderer();
-console.log("episode 1:', verdict);
+console.log("episode 1:", verdict);
 
-// Episode 1 prediction - 
+// Episode 1 prediction - Miss Scarlet
 
 
 
@@ -29,7 +29,7 @@ console.log("episode 1:', verdict);
 
 // changeMurderer();
 // const verdict = declareMurderer();
-// console.log("episode 2:', verdict);
+// console.log("episode 2:", verdict);
 
 // Episode 2 prediction - 
 
