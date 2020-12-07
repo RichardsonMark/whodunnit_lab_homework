@@ -98,25 +98,25 @@
 
 
 // Episode 6
-let murderer = 'Colonel Mustard';
+// let murderer = 'Colonel Mustard';
 
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
 
-  const plotTwist = function() {
-    murderer = 'Mrs. White';
-  }
+//   const plotTwist = function() {
+//     murderer = 'Mrs. White';
+//   }
 
-  plotTwist();
-}
+//   plotTwist();
+// }
 
-const declareMurderer = function () {
-  return `The murderer is ${murderer}.`;
-}
+// const declareMurderer = function () {
+//   return `The murderer is ${murderer}.`;
+// }
 
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
 
 // Episode 6 prediction - `The murderer is Mrs. White.`
 // Starts as Col Mustard, changeMurderer declares Mr Green, but plotTwist which is within this function then declares that 'plot twist', it's now Mrs White. so when changeMurderer is invoked, Mr Green is the current murderer for a split second, but then plotTwist runs befoire that function is finished, which switches it to Mrs White.
@@ -150,7 +150,7 @@ console.log(verdict);
 // const verdict = declareMurderer();
 // console.log(verdict);
 
-// Episode 7 prediction - 
+// Episode 7 prediction - Mr. Green is the murderer as plotTwist and unexpectedOutcome don't change anything as they are trying to change a constant variable.
 
 
 
@@ -190,22 +190,22 @@ console.log(verdict);
 // const verdict = declareWeapon();
 // console.log(verdict);
 
-// Episode 8 prediction - 
+// Episode 8 prediction - `The weapon is Candle stick.` as changeScenario is called before console.log and in the chageScenario function, plotTwist changes the room to the Dining Room. That then means when unexpectedOutcome is called, plotTwist changes the murderer to Col Mustard as the if statement there is satisfied, which then means that the if statement in unexpectedOutcome is also true, changing the weapon to the Candlestick! 
 
 
 
 // Episode 9
-// let murderer = 'Professor Plum';
+let murderer = 'Professor Plum';
 
-// if (murderer === 'Professor Plum') {
-//   let murderer = 'Mrs. Peacock';
-// }
+if (murderer === 'Professor Plum') {
+  let murderer = 'Mrs. Peacock';
+}
 
-// const declareMurderer = function() {
-//   return `The murderer is ${murderer}.`;
-// }
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
 
-// const verdict = declareMurderer();
-// console.log(verdict);
+const verdict = declareMurderer();
+console.log(verdict);
 
-// Episode 9 prediction - 
+// Episode 9 prediction - `The murderer is Professor Plum.` Prof Plum is initially set as the variable. This means that the if statement that follows is true and a murderer variable is declared as Mrs. Peacock, but that is only within the if statement, it isn't used again/passed to anywhere, so the initial murderer declaration is still the one that is in use when the verdict is called.
