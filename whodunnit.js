@@ -36,18 +36,18 @@
 
 
 // Episode 3
-let murderer = 'Professor Plum';
+// let murderer = 'Professor Plum';
 
-const declareMurderer = function() {
-  let murderer = 'Mrs. Peacock';
-  return `The murderer is ${murderer}.`;
-}
+// const declareMurderer = function() {
+//   let murderer = 'Mrs. Peacock';
+//   return `The murderer is ${murderer}.`;
+// }
 
-const firstVerdict = declareMurderer();
-console.log('First Verdict: ', firstVerdict);
+// const firstVerdict = declareMurderer();
+// console.log('First Verdict: ', firstVerdict);
 
-const secondVerdict = `The murderer is ${murderer}.`;
-console.log('Second Verdict: ', secondVerdict);
+// const secondVerdict = `The murderer is ${murderer}.`;
+// console.log('Second Verdict: ', secondVerdict);
 
 // Episode 3 prediction - 
 // First verdict:  Mrs Peacock - First verdict relies on declareMurderer()
@@ -69,7 +69,8 @@ console.log('Second Verdict: ', secondVerdict);
 // console.log(suspects);
 // console.log(`Suspect three is ${suspectThree}.`);
 
-// Episode 4 prediction - 
+// Episode 4 prediction - In the first console.log, this will return `The suspects are Miss Scarlet, Professor Plum,  Colonel Mustard.` as the first two are declared at the beginning, then Colonel Mustard is declared suspect Three within declareAllSuspects and the log is using 'suspects' as the argument.
+// Then in the second console.log request, 'Suspect three is Mrs. Peacock.` will be returned as Colonel Mustard is only suspectThree within declareAllSuspects.
 
 
 
@@ -92,7 +93,7 @@ console.log('Second Verdict: ', secondVerdict);
 // const verdict = declareWeapon();
 // console.log(verdict);
 
-// Episode 5 prediction - 
+// Episode 5 prediction - "The weapon is the Revolver" as is changed by changeWeapon before the verdict ss declared
 
 
 
@@ -117,7 +118,8 @@ console.log('Second Verdict: ', secondVerdict);
 // const verdict = declareMurderer();
 // console.log(verdict);
 
-// Episode 6 prediction - 
+// Episode 6 prediction - `The murderer is Mrs. White.`
+// Starts as Col Mustard, changeMurderer declares Mr Green, but plotTwist which is within this function then declares that 'plot twist', it's now Mrs White. so when changeMurderer is invoked, Mr Green is the current murderer for a split second, but then plotTwist runs befoire that function is finished, which switches it to Mrs White.
 
 
 
