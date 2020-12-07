@@ -98,25 +98,25 @@
 
 
 // Episode 6
-// let murderer = 'Colonel Mustard';
+let murderer = 'Colonel Mustard';
 
-// const changeMurderer = function() {
-//   murderer = 'Mr. Green';
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
 
-//   const plotTwist = function() {
-//     murderer = 'Mrs. White';
-//   }
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
 
-//   plotTwist();
-// }
+  plotTwist();
+}
 
-// const declareMurderer = function () {
-//   return `The murderer is ${murderer}.`;
-// }
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
+}
 
-// changeMurderer();
-// const verdict = declareMurderer();
-// console.log(verdict);
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
 
 // Episode 6 prediction - `The murderer is Mrs. White.`
 // Starts as Col Mustard, changeMurderer declares Mr Green, but plotTwist which is within this function then declares that 'plot twist', it's now Mrs White. so when changeMurderer is invoked, Mr Green is the current murderer for a split second, but then plotTwist runs befoire that function is finished, which switches it to Mrs White.
