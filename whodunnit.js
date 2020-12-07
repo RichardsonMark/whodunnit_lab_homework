@@ -152,6 +152,8 @@
 
 // Episode 7 prediction - Mr. Green is the murderer as plotTwist and unexpectedOutcome don't change anything as they are trying to change a constant variable.
 
+// ...In choosing this one to base my extension attempt on, It seems I was wrong in my assumption as to why Mr. Green was the murderer. Looking at it again, it's more to do with plotTwist and unexpectedOutcome not actually doing anything, rather than not 'being able to' change the variable.
+
 
 
 // Episode 8
@@ -195,17 +197,40 @@
 
 
 // Episode 9
+// let murderer = 'Professor Plum';
+
+// if (murderer === 'Professor Plum') {
+//   let murderer = 'Mrs. Peacock';
+// }
+
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
+
+// const verdict = declareMurderer();
+// console.log(verdict);
+
+// Episode 9 prediction - `The murderer is Professor Plum.` Prof Plum is initially set as the variable. This means that the if statement that follows is true and a murderer variable is declared as Mrs. Peacock, but that is only within the if statement, it isn't used again/passed to anywhere, so the initial murderer declaration is still the one that is in use when the verdict is called.
+
+
+
+// Episode 10
 let murderer = 'Professor Plum';
 
-if (murderer === 'Professor Plum') {
-  let murderer = 'Mrs. Peacock';
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+    unexpectedOutcome();  
+}
+
+const unexpectedOutcome = function() {
+    murderer = 'Miss Scarlet';
 }
 
 const declareMurderer = function() {
   return `The murderer is ${murderer}.`;
 }
 
+changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
-
-// Episode 9 prediction - `The murderer is Professor Plum.` Prof Plum is initially set as the variable. This means that the if statement that follows is true and a murderer variable is declared as Mrs. Peacock, but that is only within the if statement, it isn't used again/passed to anywhere, so the initial murderer declaration is still the one that is in use when the verdict is called.
