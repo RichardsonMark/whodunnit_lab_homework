@@ -1,16 +1,16 @@
 // Episode 1
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Library',
-  weapon: 'Rope'
-};
+// const scenario = {
+//   murderer: 'Miss Scarlet',
+//   room: 'Library',
+//   weapon: 'Rope'
+// };
 
-const declareMurderer = function() {
-  return `The murderer is ${scenario.murderer}.`;
-}
+// const declareMurderer = function() {
+//   return `The murderer is ${scenario.murderer}.`;
+// }
 
-const verdict = declareMurderer();
-console.log("episode 1:", verdict);
+// const verdict = declareMurderer();
+// console.log("episode 1:", verdict);
 
 // Episode 1 prediction - Miss Scarlet
 
@@ -31,27 +31,27 @@ console.log("episode 1:", verdict);
 // const verdict = declareMurderer();
 // console.log("episode 2:", verdict);
 
-// Episode 2 prediction - 
+// Episode 2 prediction - Predict a problem, trying to change a constant variable
 
 
 
 // Episode 3
-// let murderer = 'Professor Plum';
+let murderer = 'Professor Plum';
 
-// const declareMurderer = function() {
-//   let murderer = 'Mrs. Peacock';
-//   return `The murderer is ${murderer}.`;
-// }
+const declareMurderer = function() {
+  let murderer = 'Mrs. Peacock';
+  return `The murderer is ${murderer}.`;
+}
 
-// const firstVerdict = declareMurderer();
-// console.log('First Verdict: ', firstVerdict);
+const firstVerdict = declareMurderer();
+console.log('First Verdict: ', firstVerdict);
 
-// const secondVerdict = `The murderer is ${murderer}.`;
-// console.log('Second Verdict: ', secondVerdict);
+const secondVerdict = `The murderer is ${murderer}.`;
+console.log('Second Verdict: ', secondVerdict);
 
 // Episode 3 prediction - 
-// First verdict:  
-// Second verdict:
+// First verdict:  Mrs Peacock - First verdict relies on declareMurderer()
+// Second verdict: Professor Plum - Second verdict is based on the global variable, Mrs Peacock is only the murderer within the declareMurderer function
 
 
 
