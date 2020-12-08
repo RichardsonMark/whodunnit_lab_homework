@@ -51,7 +51,7 @@
 
 // Episode 3 prediction - 
 // First verdict:  Mrs Peacock - First verdict relies on declareMurderer()
-// Second verdict: Professor Plum - Second verdict is based on the global variable, Mrs Peacock is only the murderer within the declareMurderer function
+// Second verdict: Professor Plum - Second verdict is based on the global scope variable, Mrs Peacock is only the murderer within the declareMurderer function
 
 
 
@@ -93,7 +93,7 @@
 // const verdict = declareWeapon();
 // console.log(verdict);
 
-// Episode 5 prediction - "The weapon is the Revolver" as is changed by changeWeapon before the verdict ss declared
+// Episode 5 prediction - "The weapon is the Revolver" as is changed by changeWeapon before the verdict is declared
 
 
 
@@ -154,6 +154,8 @@
 
 // ...In choosing this one to base my extension attempt on, It seems I was wrong in my assumption as to why Mr. Green was the murderer. Looking at it again, it's more to do with plotTwist and unexpectedOutcome not actually doing anything, rather than not 'being able to' change the variable.
 
+// and looking at it agian! it's because the block that contains Col Mustard and  Miss Scarlet creates a 2nd murderer and when that block is completed it lets go of the variable. so the original is still Mr. Green, it wasn't updated as these are only available within the scope of the block. Always look for let/var/const!!
+
 
 
 // Episode 8
@@ -210,7 +212,7 @@
 // const verdict = declareMurderer();
 // console.log(verdict);
 
-// Episode 9 prediction - `The murderer is Professor Plum.` Prof Plum is initially set as the variable. This means that the if statement that follows is true and a murderer variable is declared as Mrs. Peacock, but that is only within the if statement, it isn't used again/passed to anywhere, so the initial murderer declaration is still the one that is in use when the verdict is called.
+// Episode 9 prediction - `The murderer is Professor Plum.` Prof Plum is initially set as the variable. This means that the if statement that follows is true and a NEW murderer variable is declared as Mrs. Peacock, but that is only within the if statement, it isn't used again/passed to anywhere, so the initial murderer declaration is still the one that is in use when the verdict is called.
 
 
 
